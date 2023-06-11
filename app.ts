@@ -9,6 +9,7 @@ class SolarSystemService {
 
   constructor() {
     this.planets = [
+      { name: "Sun", radius: 696340, distanceToSun: 0 },
       { name: "Mercury", radius: 2439.7, distanceToSun: 57909175 },
       { name: "Venus", radius: 6051.8, distanceToSun: 108208930 },
       { name: "Earth", radius: 6371, distanceToSun: 149597870 },
@@ -69,5 +70,5 @@ console.log("Updated Planets:", solarSystem.getPlanets());
 const distance = solarSystem.getDistanceBetweenPlanets("Earth", "Mars");
 console.log("Distance between Earth and Mars:", distance);
 
-const sortedPlanets = solarSystem.sortPlanetsByDistanceToPlanet("Sun");
+const sortedPlanets = solarSystem.sortPlanetsByDistanceToPlanet("Jupiter");
 console.log("Sorted Planets:", sortedPlanets);
