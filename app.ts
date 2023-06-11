@@ -67,8 +67,8 @@ console.log("Planets:", solarSystem.getPlanets());
 solarSystem.updatePlanet("Pluto", 1188.3, 5906380000);
 console.log("Updated Planets:", solarSystem.getPlanets());
 
-const distance = solarSystem.getDistanceBetweenPlanets("Earth", "Mars");
-console.log("Distance between Earth and Mars:", distance);
+const distance = solarSystem.getDistanceBetweenPlanets("Venus", "Uranus");
+console.log("Distance between Venus and Uranus:", distance);
 
 const sortedPlanets = solarSystem.sortPlanetsByDistanceToPlanet("Jupiter");
 console.log("Sorted Planets:", sortedPlanets);
