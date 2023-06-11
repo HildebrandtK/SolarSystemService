@@ -57,6 +57,14 @@ class SolarSystemService {
     }
     return [];
   }
+
+  sortPlanetsByRadiusAsc(): Planet[] {
+    return [...this.planets].sort((a, b) => a.radius - b.radius);
+  }
+
+  sortPlanetsByRadiusDsc(): Planet[] {
+    return [...this.planets].sort((a, b) => b.radius - a.radius);
+  }
 }
 
 // Usage
@@ -70,5 +78,12 @@ console.log("Updated Planets:", solarSystem.getPlanets());
 const distance = solarSystem.getDistanceBetweenPlanets("Venus", "Uranus");
 console.log("Distance between Venus and Uranus:", distance);
 
-const sortedPlanets = solarSystem.sortPlanetsByDistanceToPlanet("Jupiter");
-console.log("Sorted Planets:", sortedPlanets);
+const sortedPlanetsByDistanceToPlanet =
+  solarSystem.sortPlanetsByDistanceToPlanet("Jupiter");
+console.log("Sorted Planets:", sortedPlanetsByDistanceToPlanet);
+
+const sortedPlanetsByRadiusAsc = solarSystem.sortPlanetsByRadiusAsc();
+console.log("Sorted Planets by radius ascending:", sortedPlanetsByRadiusAsc);
+
+const sortedPlanetsByRadiusDsc = solarSystem.sortPlanetsByRadiusDsc();
+console.log("Sorted Planets by radius descending:", sortedPlanetsByRadiusDsc);
