@@ -21,7 +21,7 @@ class SolarSystemService {
   }
 
   getPlanets(): Planet[] {
-    return Object.values(this.planets);
+    return [...Object.values(this.planets)];
   }
 
   updateOrCreatePlanet(
@@ -125,3 +125,5 @@ console.log(
   "Sorted Planets by distance to sun descending:",
   sortedPlanetsByRadiusDsc
 );
+
+console.log(solarSystem.getPlanets());
